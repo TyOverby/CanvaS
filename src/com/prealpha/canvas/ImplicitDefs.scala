@@ -9,7 +9,9 @@ trait ImplicitDefs {
         Color(in, in, in)
     }
 
+    implicit def old2new(old: AwtColor) =  Color(old.getRed, old.getGreen, old.getBlue)
+
     def greyscale(in: Int) = Color(in % 256, in % 256, in % 256)
 
-    implicit def setting2Actual[A](setting: Setting[A]) = setting.sett
+    implicit def setting2Actual[A](setting: Setting[A]) = setting.value
 }

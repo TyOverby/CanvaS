@@ -17,15 +17,14 @@ trait Setting[A] {
     def onSet(a: A)
 
     val default: A
-    var sett: A = default
-    var alreadySet = false
-    val setOnlyOnce = true
+    var value: A = default
 
     def :=(a: A) {
-        if (!alreadySet || !setOnlyOnce) {
-            sett = a
-            onSet(a)
-            alreadySet = true
-        }
+        value = a
+        onSet(a)
+    }
+
+    def =:=(a: A) {
+        value = a
     }
 }

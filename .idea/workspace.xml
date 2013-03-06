@@ -5,12 +5,20 @@
     <ignored path="CanvaS.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AwtCanvas.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362440118915" ignored="false" />
-    <file path="/Canvas.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362445503730" ignored="false" />
+    <file path="/Canvas.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362539106306" ignored="false" />
     <file path="/CanvasContext.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362391269675" ignored="false" />
     <file path="/Color.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362443673967" ignored="false" />
-    <file path="/ImplicitDefs.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362444456809" ignored="false" />
-    <file path="/Setting.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362438432201" ignored="false" />
+    <file path="/ImplicitDefs.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362526232754" ignored="false" />
+    <file path="/Setting.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362533904274" ignored="false" />
     <file path="/fragment.java" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362442261614" ignored="false" />
+    <file path="/Settings.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362538319079" ignored="false" />
+    <file path="/GrahpicsBuiltins.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362528276871" ignored="false" />
+    <file path="/HigherOrder.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362528458702" ignored="false" />
+    <file path="/CanvasOps.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362536047546" ignored="false" />
+    <file path="/GraphicsBuiltins.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362538370039" ignored="false" />
+    <file path="/Utilities.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362531365142" ignored="false" />
+    <file path="/a.dummy" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362533933593" ignored="false" />
+    <file path="/IO.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362538403095" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,38 +80,20 @@
       <file leaf-file-name="Canvas.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Canvas.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="23" selection-start="3887" selection-end="3887" vertical-scroll-proportion="0.8016667">
+            <state line="13" column="19" selection-start="282" selection-end="293" vertical-scroll-proportion="-0.41196012">
               <folding>
-                <element signature="e#29#64#0" expanded="true" />
+                <element signature="e#29#48#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImplicitDefs.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/ImplicitDefs.scala">
+      <file leaf-file-name="HigherOrder.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/HigherOrder.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="40" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Color.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Color.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AwtCanvas.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/AwtCanvas.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="30" selection-start="920" selection-end="920" vertical-scroll-proportion="0.0">
+            <state line="9" column="34" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#29#64#0" expanded="true" />
+                <element signature="e#40#75#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,10 +110,18 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/CanvasContext.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/Setting.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/AwtCanvas.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/Color.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/ImplicitDefs.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/GrahpicsBuiltins.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/HigherOrder.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/Utilities.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/utilities.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/Setting.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/CanvasOps.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/Settings.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/GraphicsBuiltins.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/IO.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/Canvas.scala" />
       </list>
     </option>
@@ -193,6 +191,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="canvas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Setting.scala" />
+              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CanvaS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CanvaS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="canvas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CanvaS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CanvaS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="canvas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -350,6 +392,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -360,11 +403,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6709539" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67309755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32690248" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -436,27 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_10/src.zip!/java/awt/Graphics2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="693" column="25" selection-start="31455" selection-end="31455" vertical-scroll-proportion="0.33296582">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/CanvasContext.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="16" selection-start="51" selection-end="51" vertical-scroll-proportion="0.056229327">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Setting.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="89" selection-end="89" vertical-scroll-proportion="0.11333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_10/src.zip!/java/awt/image/BufferedImage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1549" column="19" selection-start="60813" selection-end="60813" vertical-scroll-proportion="0.33333334">
@@ -473,25 +494,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Setting.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="30" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_10/src.zip!/java/awt/Graphics2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="551" column="28" selection-start="24853" selection-end="24853" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_10/src.zip!/java/awt/geom/AffineTransform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1408" column="16" selection-start="53115" selection-end="53115" vertical-scroll-proportion="-0.43166667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Color.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+        <state line="3" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.08471761">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/ImplicitDefs.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="40" selection-start="199" selection-end="199" vertical-scroll-proportion="0.0">
+        <state line="11" column="87" selection-start="320" selection-end="320" vertical-scroll-proportion="0.31063122">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/CanvasOps.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="49" selection-start="1940" selection-end="1940" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#40#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/utilities.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="8" selection-start="85" selection-end="85" vertical-scroll-proportion="0.11295681">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/Settings.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#40#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/GraphicsBuiltins.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="19" selection-start="359" selection-end="359" vertical-scroll-proportion="-8.84">
+          <folding>
+            <element signature="e#40#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/IO.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="53" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#40#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/HigherOrder.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="34" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#40#75#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Canvas.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="23" selection-start="3887" selection-end="3887" vertical-scroll-proportion="0.8016667">
+        <state line="13" column="19" selection-start="282" selection-end="293" vertical-scroll-proportion="-0.41196012">
           <folding>
-            <element signature="e#29#64#0" expanded="true" />
+            <element signature="e#29#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
