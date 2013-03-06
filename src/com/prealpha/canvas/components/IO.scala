@@ -13,7 +13,7 @@ trait IO {
     var width: Int
     var height: Int
 
-    def writeToFile(path: String) {
+    def writeTo(path: String) {
         val allTypes = ImageIO.getWriterFormatNames
         val fileType = allTypes.find(ff => path.endsWith("."+ff))
         val (file, ft) = if (fileType.isDefined){

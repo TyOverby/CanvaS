@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage
 import java.awt.geom.AffineTransform
 
 import utilities.copy
+import com.prealpha.canvas.Color
 
 class OperationHolder(image: BufferedImage, graphics: Graphics2D) {
     // Affine Transforms apply their transformations
@@ -15,6 +16,8 @@ class OperationHolder(image: BufferedImage, graphics: Graphics2D) {
     // An operation is a function that adds a
     // transformation to the AffineTransform.
     private[this] var operations = List[() => Unit]()
+
+    var backgroundColor: Option[Color] = None
 
     def rotate(theta: Double) = {
         operations = {
@@ -44,7 +47,7 @@ class OperationHolder(image: BufferedImage, graphics: Graphics2D) {
         this
     }
 
-    def transform(transX: Int, transY: Int) = {
+    def translate(transX: Double, transY: Double) = {
         operations = {
             () => transformer.translate(transX, transY)
         } :: operations
@@ -58,6 +61,11 @@ class OperationHolder(image: BufferedImage, graphics: Graphics2D) {
         this
     }
 
+    def withBackground(color: Color) = {
+        backgroundColor = Some(color)
+        this
+    }
+
     def run() {
         // Copy the image for transforming
         val c = copy(image)
@@ -65,6 +73,11 @@ class OperationHolder(image: BufferedImage, graphics: Graphics2D) {
         // were received
         operations.foreach(f => f())
         // Draw the image with the transform applied
+        backgroundColor.foreach {
+            c =>
+                graphics.setColor(c)
+                graphics.fillRect(0, 0, this.image.getWidth, image.getHeight)
+        }
         graphics.drawImage(c, transformer, null)
     }
 }
@@ -75,12 +88,23 @@ trait CanvasOps {
 
     def chainedOps = new OperationHolder(imageBuffer, graphics)
 
+    def scale(scaleX: Double, scaleY: Double, xAnchor: Int, yAnchor: Double) {
+        chainedOps
+            .translate(-xAnchor, -yAnchor)
+            .scale(scaleX, scaleY)
+            .translate(xAnchor, yAnchor)
+    }
+
     def scale(scaleX: Double, scaleY: Double) {
         chainedOps.scale(scaleX, scaleY).run()
     }
 
     def scale(scalar: Double) {
         chainedOps.scale(scalar).run()
+    }
+
+    def translate(x:Double, y:Double){
+        chainedOps.translate(x,y).run()
     }
 
     def rotate(scalar: Double) {
@@ -91,8 +115,8 @@ trait CanvasOps {
         chainedOps.rotate(scalar, xAnchor, yAnchor).run()
     }
 
-    def shear(x: Double, y: Double){
-        chainedOps.shear(x,y).run()
+    def shear(x: Double, y: Double) {
+        chainedOps.shear(x, y).run()
     }
 
 }

@@ -3,10 +3,13 @@ package com.prealpha.canvas.components
 import java.awt.{Color => AWTColor}
 import com.prealpha.canvas.Color
 import java.awt.image.BufferedImage
+import collection.parallel.mutable.ParArray
 
 
 trait HigherOrder {
-    var totalPoints: Seq[(Int, Int)]
+
+    // TODO: Add parMap to both position and pixel maps
+    var totalPoints: ParArray[(Int, Int)]
     var imageBuffer: BufferedImage
 
     def putPixel(x: Int, y: Int, color: Color)

@@ -1,7 +1,7 @@
 package com.prealpha.canvas.components
 
 import com.prealpha.canvas.{Setting, ImplicitDefs, Color}
-import java.awt.Graphics2D
+import java.awt.{Graphics2D, Color => AWTColor}
 import java.awt.image.BufferedImage
 
 trait GraphicsBuiltins extends ImplicitDefs {
@@ -51,4 +51,7 @@ trait GraphicsBuiltins extends ImplicitDefs {
         imageBuffer.setRGB(x, y, color.getRGB)
     }
 
+    def colorAt(x: Int, y: Int): Color = {
+        new AWTColor(imageBuffer.getRGB(x,y))
+    }
 }
