@@ -1,6 +1,7 @@
 package com.tyoverby.canvas
 
 import java.awt.{Color => AwtColor}
+import language.implicitConversions
 
 class DegreeNumber(val degree: Double) extends AnyVal {
     def degrees = (degree * Math.PI / 180.0)
