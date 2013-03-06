@@ -50,7 +50,7 @@ body {
 .highlight  {
     background: #f0f3f3;
     font-family: Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
-    font-size: 1em;
+    font-size: 0.75em;
 }
 
 .code-td{
