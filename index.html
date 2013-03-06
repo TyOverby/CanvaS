@@ -53,7 +53,7 @@ mapPosition {
 
 We can also load images from our computer or the web and apply transformations from the previous color to another color.
 {% highlight scala %}
-load(\"example_input/fat_cat.jpg\")
+load("example_input/fat_cat.jpg")
 
 mapColor {
     case Color(r, g, b) => {
@@ -64,7 +64,7 @@ mapColor {
 {% endhighlight %}
 
 {% highlight scala %}
-load(\"http://i.imgur.com/GWLF4UQ.jpg\")
+load("http://i.imgur.com/GWLF4UQ.jpg")
 
 mapColor {
     case Color(r, g, b) => Color(b, g, r)  // Reverse (r,g,b) to (b,g,r)
@@ -91,7 +91,7 @@ Sometimes it is handy to be able to modify the entire canvas by applying common 
 It is simple to apply any of these transformations.
 
 {% highlight scala %}
-load(\"example_input/cute_cat.jpg\")
+load("example_input/cute_cat.jpg")
 
 //     angle       centerX, centerY
 rotate(45 degrees, width/2, height/2) 
@@ -111,7 +111,7 @@ For this, I provide the 'chainedOps' object which allows you to, well, chain ope
 be computed sequentially, but are actually all done at once!  Here's what some look like:
 
 {% highlight scala %}
-load(\"example_input/cute_cat.jpg\")
+load("example_input/cute_cat.jpg")
 
 chainedOps
     .rotate(30 degrees, width / 2, height / 2)
@@ -126,7 +126,7 @@ Neat! But how does this help with the background issue?
 Another function on chainedOps lets us set the background color used during a transformation.
 
 {% highlight scala %}
-load(\"example_input/cute_cat.jpg\")
+load("example_input/cute_cat.jpg")
 
 chainedOps
     .rotate(45 degrees, width / 2, height / 2)
@@ -144,7 +144,7 @@ you want to be explicit about where you are getting your resource from.
 We also have the 'writeTo' function, which takes a file path and saves the current image to that path.
 
 {% highlight scala %}
-load(\"example_input/cute_cat.jpg\")
+load("example_input/cute_cat.jpg")
 
 mapColor {
     case Color(r, g, b) => {
@@ -153,7 +153,7 @@ mapColor {
     }
 }
 
-writeTo(\"example_output/black_and_white_cat.png\")
+writeTo("example_output/black_and_white_cat.png")
 {% endhighlight %}
 
 For quick iterations, it would be nice if our program could pop up a window with our image in it instead of
@@ -161,15 +161,15 @@ having to save the picture and then open it up to view it.  Luckily I thought of
 methods `show()` and `show(title)`.  These will pop up a window that displays the image at the current point.
 This means that you can call show multiple times during a multi-step process and it will show all of the steps.
 {% highlight scala %}
-load(\"example_input/trees.jpg\")
+load("example_input/trees.jpg")
 
-show(\"unscaled\")
+show("unscaled")
 
 scale(0.5)
 width /= 2
 height /= 2
 
-show(\"scaled\")
+show("scaled")
 {% endhighlight %}
 
 That's all the file IO and display things, but here are some more notes:
@@ -201,19 +201,19 @@ to do one extension and we're good.  The complete code for the previous example 
 {% highlight scala %}
 import com.prealpha.Canvas
 object MyCanvas extends Canvas {
-    load(\"example_input/trees.jpg\")
+    load("example_input/trees.jpg")
 
-    show(\"unscaled\")
+    show("unscaled")
 
     scale(0.5)
     width /= 2
     height /= 2
 
-    show(\"scaled\")
+    show("scaled")
 }
 {% endhighlight %}
 
 Notice that the only difference between my example scripts and the code that actually runs is the
 import and that we wrap everything in an `object` that extends `Canvas`!  Because `Canvas` extends `App`,
 the entrypoint to our program is also inside MyCanvas as well!  We can have a fully running image generator
-in fewer lines than it takes to write \"Hello World\" in Java.
+in fewer lines than it takes to write "Hello World" in Java.
