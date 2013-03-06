@@ -41,7 +41,7 @@ body {
 #header{
     background: #EEE;
     height: 50px;
-
+    width: 820px;
     box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 2px 0px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 2px 0px;
 }
