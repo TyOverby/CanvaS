@@ -29,12 +29,12 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-body{
-    bg-color: #dddddd
+body {
+    background: #dddddd
 }
 
 wrapper{
-    bg-color #eeeeee
+    bg-background:  #eeeeee
 }
 
 .code-and-images{
