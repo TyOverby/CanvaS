@@ -6,9 +6,13 @@ tagline: I don't even know
 
 This is some content wouldn't you say?
 
+{% include code %}
 {% highlight scala %}
     val x = "hi"
 {% endhighlight %}
+{% include inbetween %}
+http://i.imgur.com/hUy6PPH.jpg
+{% include image %}
 
 
 
@@ -109,6 +113,7 @@ background to be, what we'll see next will solve this issue.
 If you wanted to perform many of these modifications to the canvas, there would be a lot of copying going on.
 For this, I provide the 'chainedOps' object which allows you to, well, chain operations which look like they will
 be computed sequentially, but are actually all done at once!  Here's what some look like:
+
 
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
