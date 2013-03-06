@@ -30,11 +30,11 @@ time, mark, audio, video {
 }
 
 body {
-    background: #dddddd
+    background: #dddddd;
 }
 
 wrapper{
-    bg-background:  #eeeeee
+    bg-background:  #eeeeee;
 }
 
 .code-and-images{
@@ -43,7 +43,7 @@ wrapper{
     margin: 0px;
     padding: 0px;
 
-    background: #f0f3f3
+    background: #f0f3f3;
 
     width: 50%;
 }
