@@ -34,7 +34,7 @@ body {
 }
 
 #wrapper{
-    bg-background:  #eeeeee;
+    background:  #eeeeee;
 }
 
 .code-and-images{
@@ -42,7 +42,7 @@ body {
 
     margin: 0px;
     padding: 0px;
-    width: 50%;
+    //width: 50%;
 }
 
 .code-td{
