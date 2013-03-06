@@ -2,3 +2,11 @@ out/
 target/
 example_input/
 example_output/
+
+# Images #
+##########
+
+*.png
+*.jpg
+*.PNG
+*.JPG
