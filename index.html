@@ -11,6 +11,8 @@ This is some content wouldn't you say?
 val x = "hi"
 {% endhighlight %}
 {% include inbetween %}
+
+{% include image %}
     <img src ="./example_output/basicDrawing.png" />
 {% include image %}
 
@@ -29,6 +31,7 @@ Later I'll show how to set up an environment for the scripts, but lets look at s
 CanvaS provides many functions from Java's Grahpics2D class.
 This enables basic drawing functionality, though isn't the core of CanvaS. 
 
+{% include code %}
 {% highlight scala  linenos %}
 width = 256
 height = 256
@@ -39,6 +42,9 @@ drawLine(0, 0, width, height)
 fillOval(width / 2, 0, width / 2, height / 2)
 drawRoundRect(25, height / 2 + 25, width/2 - 50, height/2 - 50, 20, 20)
 {% endhighlight %}
+{% include inbetween %}
+<img src ="./example_output/basicDrawing.png" />
+{% include image %}
 
 <h2> Higher Order Functions on Pixels and Positions </h2>
 <p>
@@ -48,6 +54,7 @@ drawRoundRect(25, height / 2 + 25, width/2 - 50, height/2 - 50, 20, 20)
 <p>
     In this example, we map the x and y coordinates to green and blue pixels on the canvas.
 </p>
+{% include code %}
 {% highlight scala %}
 width = 256
 height = 256
@@ -57,10 +64,14 @@ mapPosition {
     case (x, y) => Color(0, x, y)
 }
 {% endhighlight %}
+{% include inbetween %}
+<img src ="./example_output/mapPosition_example.png" />
+{% include image %}
 
 <p>
     We can also load images from our computer or the web and apply transformations from the previous color to another color.
 </p>
+{% include code %}
 {% highlight scala %}
 load("example_input/fat_cat.jpg")
 
@@ -71,7 +82,11 @@ mapColor {
     }
 }
 {% endhighlight %}
+{% include inbetween %}
+<img src ="./example_output/fat_cat_out.png" />
+{% include image %}
 
+{% include code %}
 {% highlight scala %}
 load("http://i.imgur.com/GWLF4UQ.jpg")
 
@@ -79,12 +94,16 @@ mapColor {
     case Color(r, g, b) => Color(b, g, r)  // Reverse (r,g,b) to (b,g,r)
 }
 {% endhighlight %}
+{% include inbetween %}
+<img src ="./example_output/funny_fish.png" />
+{% include image %}
 <p>
     If you want to outsmart the check that I perform on 'load' you can also use 'loadFile' and 'loadUrl' for self-documentation.
 </p><p>
     One last example, my favorite generated image is very easy to express as a function.
     If you want to find out why this works, get ready to break out your truth tables!
 </p>
+{% include code %}
 {% highlight scala %}
 width = 256
 height = 256
@@ -93,6 +112,9 @@ mapPosition {
     case (x, y) => Color(x ^ y, x ^ y, x ^ y)
 }
 {% endhighlight %}
+{% include inbetween %}
+<img src ="./example_output/xxory.png" />
+{% include image %}
 <p><small>
     Note that this code would break if our image was any bigger because
     it would try to produce (r, g, b) values greater than 255.
@@ -108,12 +130,16 @@ mapPosition {
     It is simple to apply any of these transformations.
 </p>
 
+{% include code %}
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
 
 //     angle       centerX, centerY
 rotate(45 degrees, width/2, height/2) 
 {% endhighlight %}
+{% include inbetween %}
+<img src ="./example_output/cute_rotation.png" />
+{% include image %}
 
 <h3>Notice two things:</h3>
 
@@ -133,6 +159,7 @@ rotate(45 degrees, width/2, height/2)
     be computed sequentially, but are actually all done at once!  Here's what some look like:
 </p>
 
+{% include code %}
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
 
@@ -144,12 +171,16 @@ chainedOps
     .run()
 
 {% endhighlight %}
+{% include inbetween %}
+<img src ="./example_output/complex_cute.png" />
+{% include image %}
 
 <p>
     Neat! But how does this help with the background issue?
     Another function on chainedOps lets us set the background color used during a transformation.
 </p>
 
+{% include code %}
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
 
@@ -158,6 +189,9 @@ chainedOps
     .withBackground(Color(0, 0, 0))
     .run()
 {% endhighlight %}
+{% include inbetween %}
+TODO: regen this one <!--<img src ="./example_output/.png" /> -->
+{% include image %}
 
 <p>
     There we go!  And obviously, we can have as many transformations in that chain as we want.
@@ -171,6 +205,7 @@ chainedOps
     We also have the 'writeTo' function, which takes a file path and saves the current image to that path.
 </p>
 
+{% include code %}
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
 
@@ -183,6 +218,9 @@ mapColor {
 
 writeTo("example_output/black_and_white_cat.png")
 {% endhighlight %}
+{% include inbetween %}
+    <img src ="./example_output/black_and_white_cat.png" />
+{% include image %}
 
 <p>
     For quick iterations, it would be nice if our program could pop up a window with our image in it instead of
@@ -190,6 +228,7 @@ writeTo("example_output/black_and_white_cat.png")
     methods `show()` and `show(title)`.  These will pop up a window that displays the image at the current point.
     This means that you can call show multiple times during a multi-step process and it will show all of the steps.
 </p>
+{% include code %}
 {% highlight scala %}
 load("example_input/trees.jpg")
 
@@ -201,6 +240,9 @@ height /= 2
 
 show("scaled")
 {% endhighlight %}
+{% include inbetween %}
+<img width=255 height=255 src ="./example_output/trees2.png" />
+{% include image %}
 
 <p>
     That's all the file IO and display things, but here are some more notes:
@@ -239,6 +281,7 @@ Canvas and then access the 'imageBuffer' field on it.
     to do one extension and we're good.  The complete code for the previous example is just this:
 </p>
 
+{% include code %}
 {% highlight scala %}
 import com.prealpha.Canvas
 object MyCanvas extends Canvas {
@@ -253,6 +296,9 @@ object MyCanvas extends Canvas {
     show("scaled")
 }
 {% endhighlight %}
+{% include inbetween %}
+<img src ="./example_output/trees.png" />
+{% include image %}
 
 <p>
     Notice that the only difference between my example scripts and the code that actually runs is the
