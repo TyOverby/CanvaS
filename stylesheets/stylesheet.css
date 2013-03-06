@@ -36,6 +36,12 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#header{
+    background: white;
+    height: 50px;
+
+}
+
 #wrapper{
     background:  white;
     padding: 10px;
