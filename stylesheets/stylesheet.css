@@ -42,15 +42,13 @@ wrapper{
 
     margin: 0px;
     padding: 0px;
-
-    background: #f0f3f3;
-
-    //width: 50%;
+    width: 50%;
 }
 
 .code-td{
   width: 50%;
   vertical-align:top;
+  background: #f0f3f3;
 }
 .image-td{
   //width: 25%;
