@@ -49,8 +49,9 @@ wrapper{
 }
 
 .code-td{
+  width: 25%;
   vertical-align:top;
 }
 .image-td{
-
+  width: 25%;
 }
