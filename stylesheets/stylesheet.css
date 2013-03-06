@@ -79,6 +79,11 @@ body {
 
 }
 
+img{
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
 .code-td{
   width: 50%;
   vertical-align:top;
