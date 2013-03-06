@@ -2,6 +2,7 @@ out/
 target/
 example_input/
 example_output/
+project/
 
 # Images #
 ##########
