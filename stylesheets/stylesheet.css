@@ -92,3 +92,12 @@ img{
 .image-td{
   //width: 25%;
 }
+
+
+h1{
+    font-size: 20px;
+}
+h2{
+    font-size: 15px;
+    font-weight: bold;
+}

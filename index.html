@@ -23,9 +23,9 @@ realized that I could create a domain specific language that would be extensible
 
 Later I'll show how to set up an environment for the scripts, but lets look at some code first.
 
-### Sample Code
+<h1> Sample Code </h1>
 
-## Basic Drawing
+<h2> Basic Drawing </h2>
 CanvaS provides many functions from Java's Grahpics2D class.
 This enables basic drawing functionality, though isn't the core of CanvaS. 
 
@@ -40,11 +40,14 @@ fillOval(width / 2, 0, width / 2, height / 2)
 drawRoundRect(25, height / 2 + 25, width/2 - 50, height/2 - 50, 20, 20)
 {% endhighlight %}
 
-## Higher Order Functions on Pixels and Positions
-Many operations on pixels can be expressed as a single function.
-CanvaS offers a 'map' function that can be used to great effect.
-
-In this example, we map the x and y coordinates to green and blue pixels on the canvas.  
+<h2> Higher Order Functions on Pixels and Positions </h2>
+<p>
+    Many operations on pixels can be expressed as a single function.
+    CanvaS offers a 'map' function that can be used to great effect.
+</p>
+<p>
+    In this example, we map the x and y coordinates to green and blue pixels on the canvas.
+</p>
 {% highlight scala %}
 width = 256
 height = 256
@@ -55,7 +58,9 @@ mapPosition {
 }
 {% endhighlight %}
 
-We can also load images from our computer or the web and apply transformations from the previous color to another color.
+<p>
+    We can also load images from our computer or the web and apply transformations from the previous color to another color.
+</p>
 {% highlight scala %}
 load("example_input/fat_cat.jpg")
 
@@ -74,11 +79,12 @@ mapColor {
     case Color(r, g, b) => Color(b, g, r)  // Reverse (r,g,b) to (b,g,r)
 }
 {% endhighlight %}
-If you want to outsmart the check that I perform on 'load' you can also use 'loadFile' and 'loadUrl' for self-documentation.
-
-
-One last example, my favorite generated image is very easy to express as a function.
-If you want to find out why this works, get ready to break out your truth tables!
+<p>
+    If you want to outsmart the check that I perform on 'load' you can also use 'loadFile' and 'loadUrl' for self-documentation.
+</p><p>
+    One last example, my favorite generated image is very easy to express as a function.
+    If you want to find out why this works, get ready to break out your truth tables!
+</p>
 {% highlight scala %}
 width = 256
 height = 256
@@ -87,12 +93,20 @@ mapPosition {
     case (x, y) => Color(x ^ y, x ^ y, x ^ y)
 }
 {% endhighlight %}
-Note that this code would break if our image was any bigger because it would try to produce (r, g, b) values greater than 255.
+<p><small>
+    Note that this code would break if our image was any bigger because
+    it would try to produce (r, g, b) values greater than 255.
+</small></p>
 
-## Canvas Modification
-Sometimes it is handy to be able to modify the entire canvas by applying common operations like translating, scaling, and shearing.
+<h2> Canvas Modification </h2>
+<p>
+    Sometimes it is handy to be able to modify the entire canvas by applying common
+    operations like translating, scaling, and shearing.
+</p>
 
-It is simple to apply any of these transformations.
+<p>
+    It is simple to apply any of these transformations.
+</p>
 
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
@@ -101,19 +115,23 @@ load("example_input/cute_cat.jpg")
 rotate(45 degrees, width/2, height/2) 
 {% endhighlight %}
 
-Notice two things:
+<h3>Notice two things:</h3>
 
-* We implicitly converted from degrees to radians with the 'degrees' postfix-operator.
-* The un-rotated picture of the cat is still in the background.  
+        <ul>
+            <li>
+                We implicitly converted from degrees to radians with the 'degrees' postfix-operator.
+            </li>
+            <li>
+                The un-rotated picture of the cat is still in the background.
+            </li>
+        </ul>
 
-Because we sometimes want this behavior, and it would be silly of me to guess what color you actually wanted the
-background to be, what we'll see next will solve this issue.
 
-
-If you wanted to perform many of these modifications to the canvas, there would be a lot of copying going on.
-For this, I provide the 'chainedOps' object which allows you to, well, chain operations which look like they will
-be computed sequentially, but are actually all done at once!  Here's what some look like:
-
+<p>
+    If you wanted to perform many of these modifications to the canvas, there would be a lot of copying going on.
+    For this, I provide the 'chainedOps' object which allows you to, well, chain operations which look like they will
+    be computed sequentially, but are actually all done at once!  Here's what some look like:
+</p>
 
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
@@ -127,8 +145,10 @@ chainedOps
 
 {% endhighlight %}
 
-Neat! But how does this help with the background issue?
-Another function on chainedOps lets us set the background color used during a transformation.
+<p>
+    Neat! But how does this help with the background issue?
+    Another function on chainedOps lets us set the background color used during a transformation.
+</p>
 
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
@@ -139,14 +159,17 @@ chainedOps
     .run()
 {% endhighlight %}
 
-There we go!  And obviously, we can have as many transformations in that chain as we want.
+<p>
+    There we go!  And obviously, we can have as many transformations in that chain as we want.
+</p>
 
-
-## File IO, Displaying, and Saving Images 
-You've already seen 'load', but 'loadFile' and 'loadUrl' also exist if
-you want to be explicit about where you are getting your resource from.
-
-We also have the 'writeTo' function, which takes a file path and saves the current image to that path.
+<h2> File IO, Displaying, and Saving Images </h2>
+<p>
+    You've already seen 'load', but 'loadFile' and 'loadUrl' also exist if
+    you want to be explicit about where you are getting your resource from.
+</p><p>
+    We also have the 'writeTo' function, which takes a file path and saves the current image to that path.
+</p>
 
 {% highlight scala %}
 load("example_input/cute_cat.jpg")
@@ -161,10 +184,12 @@ mapColor {
 writeTo("example_output/black_and_white_cat.png")
 {% endhighlight %}
 
-For quick iterations, it would be nice if our program could pop up a window with our image in it instead of
-having to save the picture and then open it up to view it.  Luckily I thought of that, and provide the
-methods `show()` and `show(title)`.  These will pop up a window that displays the image at the current point.
-This means that you can call show multiple times during a multi-step process and it will show all of the steps.
+<p>
+    For quick iterations, it would be nice if our program could pop up a window with our image in it instead of
+    having to save the picture and then open it up to view it.  Luckily I thought of that, and provide the
+    methods `show()` and `show(title)`.  These will pop up a window that displays the image at the current point.
+    This means that you can call show multiple times during a multi-step process and it will show all of the steps.
+</p>
 {% highlight scala %}
 load("example_input/trees.jpg")
 
@@ -177,31 +202,42 @@ height /= 2
 show("scaled")
 {% endhighlight %}
 
-That's all the file IO and display things, but here are some more notes:
-
+<p>
+    That's all the file IO and display things, but here are some more notes:
+</p><p>
 Setting 'width' and 'height' after they were first set or after a `load(file)` call will crop the image to
 the new width and height.  You can also crop an area using the function 'crop(x, y, width, height)'.
-
-
+</p><p>
 If you want to use this code to generate a java.awt.BufferedImage, simply instantiate a class that extends
 Canvas and then access the 'imageBuffer' field on it.
-`val image = ((new MyCanvas).imageBuffer)` 
+<code>val image = ((new MyCanvas).imageBuffer)</code>
+</p>
 
+<h2> Actually getting this code working  </h2>
 
-## Actually getting this code working
+<p>
+    You will need 3 things in order to actually start manipulating images programmatically.
+</p>
+        <ol>
+            <li>
+                The Scala Compiler
+            </li>
+            <li>
+                An IDE that supports Scala
+            </li>
+            <li>
+                My library
+            </li>
+        </ol>
+<p><small>(SBT support coming soon)</small></p>(SBT support coming soon)
 
-You will need 3 things in order to actually start manipulating images programmatically. 
-
-1. The Scala Compiler
-2. An IDE that supports Scala
-3. My library.
-
-(SBT support coming soon)
-
-Once you have the above required programs and library, it is time to actually run some code.
-Fortunately, I've made it incredibly easy to do so!
-The Canvas class contains all the functions that you've been reading about, so we simply need
-to do one extension and we're good.  The complete code for the previous example is just this:
+<p>
+    Once you have the above required programs and library, it is time to actually run some code.
+    Fortunately, I've made it incredibly easy to do so!
+</p><p>
+    The Canvas class contains all the functions that you've been reading about, so we simply need
+    to do one extension and we're good.  The complete code for the previous example is just this:
+</p>
 
 {% highlight scala %}
 import com.prealpha.Canvas
@@ -218,7 +254,9 @@ object MyCanvas extends Canvas {
 }
 {% endhighlight %}
 
-Notice that the only difference between my example scripts and the code that actually runs is the
-import and that we wrap everything in an `object` that extends `Canvas`!  Because `Canvas` extends `App`,
-the entrypoint to our program is also inside MyCanvas as well!  We can have a fully running image generator
-in fewer lines than it takes to write "Hello World" in Java.
+<p>
+    Notice that the only difference between my example scripts and the code that actually runs is the
+    import and that we wrap everything in an `object` that extends `Canvas`!  Because `Canvas` extends `App`,
+    the entrypoint to our program is also inside MyCanvas as well!  We can have a fully running image generator
+    in fewer lines than it takes to write "Hello World" in Java.
+</p>
