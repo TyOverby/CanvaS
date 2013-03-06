@@ -43,13 +43,13 @@ wrapper{
     margin: 0px;
     padding: 0px;
 
+    background: #f0f3f3
+
     width: 50%;
 }
 
 .code-td{
-    background: #f0f3f3
-    margin: 0px;
-    padding: 0px;
+
 }
 .image-td{
      margin: 0px;
