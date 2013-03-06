@@ -28,6 +28,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   border-width: 0px;
+  border-spacing: 0px;
 }
 
 body {
