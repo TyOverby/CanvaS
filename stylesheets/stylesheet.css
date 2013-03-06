@@ -29,6 +29,14 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+body{
+    bg-color: #dddddd
+}
+
+wrapper{
+    bg-color #eeeeee
+}
+
 .code-and-images{
     border-width: 0px;
 
@@ -39,7 +47,7 @@ time, mark, audio, video {
 }
 
 .code-td{
-
+    background: #f0f3f3
 }
 .image-td{
 
