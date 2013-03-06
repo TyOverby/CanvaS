@@ -11,8 +11,6 @@ This is some content wouldn't you say?
 val x = "hi"
 {% endhighlight %}
 {% include inbetween %}
-
-{% include image %}
     <img src ="./example_output/basicDrawing.png" />
 {% include image %}
 
@@ -94,7 +92,8 @@ mapColor {
 load("http://i.imgur.com/GWLF4UQ.jpg")
 
 mapColor {
-    case Color(r, g, b) => Color(b, g, r)  // Reverse (r,g,b) to (b,g,r)
+    // Reverse (r,g,b) to (b,g,r)
+    case Color(r, g, b) => Color(b, g, r)
 }
 {% endhighlight %}
 {% include inbetween %}
