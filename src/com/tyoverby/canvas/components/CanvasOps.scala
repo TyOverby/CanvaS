@@ -1,11 +1,11 @@
-package com.prealpha.canvas.components
+package com.tyoverby.canvas.components
 
 import java.awt.Graphics2D
 import java.awt.image.BufferedImage
 import java.awt.geom.AffineTransform
 
 import utilities.copy
-import com.prealpha.canvas.Color
+import com.tyoverby.canvas.Color
 
 class OperationHolder(image: BufferedImage, graphics: Graphics2D) {
     // Affine Transforms apply their transformations

@@ -1,6 +1,6 @@
-package com.prealpha.canvas.components
+package com.tyoverby.canvas.components
 
-import com.prealpha.canvas.{Setting, ImplicitDefs, Color}
+import com.tyoverby.canvas.{Setting, ImplicitDefs, Color}
 import java.awt.{Graphics2D, Color => AWTColor}
 import java.awt.image.BufferedImage
 

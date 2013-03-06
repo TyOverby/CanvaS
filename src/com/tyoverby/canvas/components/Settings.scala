@@ -1,6 +1,6 @@
-package com.prealpha.canvas.components
+package com.tyoverby.canvas.components
 
-import com.prealpha.canvas.Setting._
+import com.tyoverby.canvas.Setting._
 import java.awt.image.BufferedImage
 
 

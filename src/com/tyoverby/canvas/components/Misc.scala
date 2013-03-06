@@ -1,7 +1,9 @@
-package com.prealpha.canvas.components
+package com.tyoverby.canvas.components
 
 import java.awt.Graphics2D
 import java.awt.image.BufferedImage
+import com.tyoverby.canvas.AwtCanvas
+import utilities.copy
 
 
 trait Misc extends CanvasOps{
@@ -18,5 +20,15 @@ trait Misc extends CanvasOps{
         translate(-x,-y)
         width = w
         height = h
+    }
+
+    private[this] var titleNum = 0
+
+    def show(){
+        show(f"image ${titleNum}")
+        titleNum += 1
+    }
+    def show(title: String){
+        AwtCanvas.showImage(copy(imageBuffer), title)
     }
 }

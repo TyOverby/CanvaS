@@ -1,7 +1,7 @@
-package com.prealpha.canvas.components
+package com.tyoverby.canvas.components
 
 import java.awt.{Color => AWTColor}
-import com.prealpha.canvas.Color
+import com.tyoverby.canvas.Color
 import java.awt.image.BufferedImage
 import collection.parallel.mutable.ParArray
 

@@ -1,4 +1,4 @@
-package com.prealpha.canvas.components
+package com.tyoverby.canvas.components
 
 import java.awt.image.BufferedImage
 

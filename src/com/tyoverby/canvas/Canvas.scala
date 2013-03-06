@@ -1,16 +1,18 @@
-package com.prealpha.canvas
+package com.tyoverby.canvas
 
 import components._
 import java.awt.{Color => AWTColor}
 import java.awt.image.BufferedImage
 import collection.parallel.mutable.ParArray
 
-class Canvas extends ImplicitDefs
+class Canvas extends App
+with ImplicitDefs
 with Settings
 with IO
 with GraphicsBuiltins
 with HigherOrder
-with CanvasOps {
+with CanvasOps
+with Misc{
     private[this] var setBefore = false
     var imageBuffer = new BufferedImage(256, 256, BufferedImage.TYPE_INT_RGB)
     var graphics = imageBuffer.createGraphics()
@@ -48,15 +50,14 @@ with CanvasOps {
     }
 }
 
-class MyCanvas extends Canvas {
-    load("example_input/cute_cat.jpg")
+object MyCanvas extends Canvas {
+    load("example_input/trees.jpg")
 
-    mapColor {
-        case Color(r, g, b) => {
-            val c = (r + g + b) / 3
-            if (c < 50) Color(0, 0, 0) else Color(255, 255, 255)
-        }
-    }
+    show("unscaled")
 
-    writeTo("example_output/black_and_white_cat.png")
+    scale(0.5)
+    width /= 2
+    height /= 2
+
+    show("scaled")
 }

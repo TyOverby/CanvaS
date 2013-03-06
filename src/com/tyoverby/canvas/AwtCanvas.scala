@@ -1,12 +1,11 @@
-package com.prealpha.canvas
+package com.tyoverby.canvas
 
 import javax.swing.{JPanel, JFrame}
 import java.awt.{Dimension, BorderLayout, Graphics}
+import java.awt.image.BufferedImage
 
 
-class AWTPane(parent: JFrame) extends JPanel {
-    val c = new MyCanvas
-    val img = c.imageBuffer
+class AWTPane(parent: JFrame, img: BufferedImage) extends JPanel {
 
     def updateSize() {
         this.setSize(img.getWidth, img.getHeight)
@@ -16,27 +15,30 @@ class AWTPane(parent: JFrame) extends JPanel {
         g.drawImage(img, 0, 0, img.getWidth, img.getHeight, null)
     }
 
-    override def  getPreferredSize: Dimension = {
+    override def getPreferredSize: Dimension = {
         new Dimension(img.getWidth, img.getHeight)
     }
 }
 
-object AwtCanvas extends App {
-    def createAndShowGui() {
+object AwtCanvas {
+    private def createAndShowGui(img: BufferedImage, title: String) {
         val frame = new JFrame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
         frame.getContentPane.setLayout(new BorderLayout)
+        frame.setTitle(title)
 
-        val awtPane = new AWTPane(frame)
+        val awtPane = new AWTPane(frame, img)
         frame.getContentPane.add(awtPane, BorderLayout.CENTER)
         frame.setResizable(false)
         frame.pack()
         frame.setVisible(true)
     }
 
-    javax.swing.SwingUtilities.invokeLater(new Runnable() {
-        def run() {
-            AwtCanvas.createAndShowGui()
-        }
-    })
+    def showImage(img: BufferedImage, title: String) {
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            def run() {
+                AwtCanvas.createAndShowGui(img, title)
+            }
+        })
+    }
 }

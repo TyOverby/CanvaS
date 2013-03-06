@@ -4,8 +4,8 @@
     <list default="true" id="de693e83-bb67-4420-a382-037d3966ea66" name="Default" comment="" />
     <ignored path="CanvaS.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/AwtCanvas.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362440118915" ignored="false" />
-    <file path="/Canvas.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362549449113" ignored="false" />
+    <file path="/AwtCanvas.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362552694406" ignored="false" />
+    <file path="/Canvas.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362553604376" ignored="false" />
     <file path="/CanvasContext.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362391269675" ignored="false" />
     <file path="/Color.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362544404847" ignored="false" />
     <file path="/ImplicitDefs.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362546684390" ignored="false" />
@@ -19,7 +19,7 @@
     <file path="/Utilities.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362531365142" ignored="false" />
     <file path="/a.dummy" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362549281825" ignored="false" />
     <file path="/IO.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362538403095" ignored="false" />
-    <file path="/Misc.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362550788159" ignored="false" />
+    <file path="/Misc.scala" changelist="de693e83-bb67-4420-a382-037d3966ea66" time="1362552768398" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,10 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Canvas.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Canvas.scala">
+      <file leaf-file-name="Canvas.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/Canvas.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="75" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
+            <state line="13" column="14" selection-start="284" selection-end="284" vertical-scroll-proportion="0.36710963">
               <folding>
                 <element signature="e#29#48#0" expanded="true" />
               </folding>
@@ -90,9 +90,9 @@
         </entry>
       </file>
       <file leaf-file-name="Misc.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/Misc.scala">
+        <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/Misc.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="18" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+            <state line="32" column="1" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#40#66#0" expanded="true" />
               </folding>
@@ -100,21 +100,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CanvasOps.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/CanvasOps.scala">
+      <file leaf-file-name="utilities.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/utilities.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="39" selection-start="2933" selection-end="2933" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#40#66#0" expanded="true" />
-              </folding>
+            <state line="5" column="8" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AwtCanvas.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/AwtCanvas.scala">
+      <file leaf-file-name="AwtCanvas.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/AwtCanvas.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="46" selection-start="771" selection-end="771" vertical-scroll-proportion="0.6495017">
+            <state line="27" column="28" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#29#64#0" expanded="true" />
               </folding>
@@ -123,9 +121,9 @@
         </entry>
       </file>
       <file leaf-file-name="Color.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Color.scala">
+        <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/Color.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="68" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+            <state line="5" column="66" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -142,7 +140,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/CanvasContext.scala" />
-        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/AwtCanvas.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/GrahpicsBuiltins.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/Utilities.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/utilities.scala" />
@@ -154,8 +151,10 @@
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/ImplicitDefs.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/GraphicsBuiltins.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/CanvasOps.scala" />
+        <option value="$PROJECT_DIR$/src/com/prealpha/canvas/AwtCanvas.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/components/Misc.scala" />
         <option value="$PROJECT_DIR$/src/com/prealpha/canvas/Canvas.scala" />
+        <option value="$PROJECT_DIR$/src/com/tyoverby/canvas/Canvas.scala" />
       </list>
     </option>
   </component>
@@ -227,28 +226,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CanvaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CanvaS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="canvas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AwtCanvas.scala" />
-              <option name="myItemType" value="org.jetbrains.plugins.scala.components.ScalaDefsProjectViewProvider$ScalaFileTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -275,9 +252,25 @@
       <recent name="C:\Users\Ty\workspace\Personal\Scala\CanvaS\example_input" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AwtCanvas">
+  <component name="RunManager" selected="Application.MyCanvas">
     <configuration default="false" name="AwtCanvas" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.prealpha.canvas.AwtCanvas" />
+      <option name="MAIN_CLASS_NAME" value="com.tyoverby.canvas.AwtCanvas" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CanvaS" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MyCanvas" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.tyoverby.canvas.MyCanvas" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -380,12 +373,14 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.AwtCanvas" />
+      <item index="1" class="java.lang.String" itemvalue="Application.MyCanvas" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.AwtCanvas" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.MyCanvas" />
+        <item index="1" class="java.lang.String" itemvalue="Application.AwtCanvas" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -404,7 +399,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -420,7 +415,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67309755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.67309755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32690248" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -495,7 +490,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Setting.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/Setting.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="30" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
           <folding />
@@ -516,14 +511,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/utilities.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="8" selection-start="85" selection-end="85" vertical-scroll-proportion="0.11295681">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/Settings.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/Settings.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="753" selection-end="753" vertical-scroll-proportion="0.0">
           <folding>
@@ -532,7 +520,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/IO.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/IO.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="53" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
           <folding>
@@ -546,14 +534,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Color.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="68" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/HigherOrder.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/HigherOrder.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="54" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0">
           <folding>
@@ -562,14 +543,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/ImplicitDefs.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/ImplicitDefs.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="1" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/GraphicsBuiltins.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/GraphicsBuiltins.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="229" selection-end="292" vertical-scroll-proportion="0.0">
           <folding>
@@ -578,38 +559,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/Canvas.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/Color.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="75" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#29#48#0" expanded="true" />
-          </folding>
+        <state line="5" column="66" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/Misc.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/CanvasOps.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="18" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+        <state line="70" column="18" selection-start="1870" selection-end="1870" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#40#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/components/CanvasOps.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/utilities.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="39" selection-start="2933" selection-end="2933" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#40#66#0" expanded="true" />
-          </folding>
+        <state line="5" column="8" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/prealpha/canvas/AwtCanvas.scala">
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/AwtCanvas.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="46" selection-start="771" selection-end="771" vertical-scroll-proportion="0.6495017">
+        <state line="27" column="28" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#29#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/components/Misc.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="1" selection-start="663" selection-end="663" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#40#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tyoverby/canvas/Canvas.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="14" selection-start="284" selection-end="284" vertical-scroll-proportion="0.36710963">
+          <folding>
+            <element signature="e#29#48#0" expanded="true" />
           </folding>
         </state>
       </provider>

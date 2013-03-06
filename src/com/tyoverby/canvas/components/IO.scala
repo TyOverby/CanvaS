@@ -1,10 +1,10 @@
-package com.prealpha.canvas.components
+package com.tyoverby.canvas.components
 
 import javax.imageio.ImageIO
 import java.io.File
 import java.net.URL
 import java.awt.image.BufferedImage
-import com.prealpha.canvas.Setting
+import com.tyoverby.canvas.Setting
 
 trait IO {
     var imageBuffer: BufferedImage

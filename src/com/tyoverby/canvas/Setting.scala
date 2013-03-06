@@ -1,4 +1,4 @@
-package com.prealpha.canvas
+package com.tyoverby.canvas
 
 object Setting {
 
