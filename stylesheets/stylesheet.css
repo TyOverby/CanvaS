@@ -48,7 +48,10 @@ wrapper{
 
 .code-td{
     background: #f0f3f3
+    margin: 0px;
+    padding: 0px;
 }
 .image-td{
-
+     margin: 0px;
+     padding: 0px;
 }
