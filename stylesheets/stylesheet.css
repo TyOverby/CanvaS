@@ -48,8 +48,10 @@ body {
     margin-left:25%;
     position: relative;
     z-index:5;
-    border-bottom-width:1px;
-    border-bottom-color:red;
+    border-bottom-width: 1px;
+    border-bottom-color: red;
+
+    font-size: 50px;
 }
 
 #wrapper{
