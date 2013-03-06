@@ -5,10 +5,6 @@
     </body>
 
     <div>
-        {% capture content %}
-        {% include about_content.markdown %}
-        {% endcapture %}
-        {{ about_content | unindent | markdownify }}
         {{ content }}
     </div>
 </html>
