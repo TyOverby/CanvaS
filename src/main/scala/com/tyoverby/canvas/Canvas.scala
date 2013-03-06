@@ -5,18 +5,21 @@ import java.awt.{Color => AWTColor}
 import java.awt.image.BufferedImage
 import collection.parallel.mutable.ParArray
 
-class Canvas extends App
-with ImplicitDefs
+class Canvas extends ImplicitDefs
 with Settings
 with IO
 with GraphicsBuiltins
 with HigherOrder
 with CanvasOps
-with Misc{
+with Misc {
     private[this] var setBefore = false
     var imageBuffer = new BufferedImage(256, 256, BufferedImage.TYPE_INT_RGB)
     var graphics = imageBuffer.createGraphics()
     var totalPoints: ParArray[(Int, Int)] = computePoints()
+
+    def reset() {
+        setBefore = false
+    }
 
     def setNewImage(newImage: BufferedImage) {
         val old = imageBuffer
@@ -34,7 +37,7 @@ with Misc{
         val height = imageBuffer.getHeight
         val arr = new ParArray[(Int, Int)](width * height)
 
-        for (y <- 0 until height;  x <- 0 until width) {
+        for (y <- 0 until height; x <- 0 until width) {
             arr(x + y * width) = (x, y)
         }
         arr
@@ -50,14 +53,20 @@ with Misc{
     }
 }
 
-object MyCanvas extends Canvas {
-    load("example_input/trees.jpg")
+object MyCanvas extends Canvas with App {
+    load("mario.jpg")
 
-    show("unscaled")
+    def frag(f: Double, broken: Int) = {
+       (f * broken + broken).toInt.toDouble / broken.toDouble
+    }
 
-    scale(0.5)
-    width /= 2
-    height /= 2
+    val hfrag = 6
+    val sfrag = 4
+    val vfrag = 4
 
-    show("scaled")
+    mapHsv {
+        case HSVColor(h, s, v) => HSVColor(frag(h, hfrag), frag(s,sfrag), frag(v, vfrag))
+    }
+
+    show()
 }
