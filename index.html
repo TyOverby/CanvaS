@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Index
+title: CanvaS
 tagline: I don't even know
 ---
 
@@ -9,3 +9,211 @@ This is some content wouldn't you say?
 {% highlight scala %}
     val x = "hi"
 {% endhighlight %}
+
+
+
+Earlier this year I really got into image manipulation and algorithmic image generation.
+Doing it in other languages seemed clumsy and the domain specific tools available didn't
+offer the powerful scripting environments that I rely on.  After looking at Scala, I
+realized that I could create a domain specific language that would be extensible, powerful and fast.
+
+Later I'll show how to set up an environment for the scripts, but lets look at some code first.
+
+### Sample Code
+
+## Basic Drawing
+CanvaS provides many functions from Java's Grahpics2D class.
+This enables basic drawing functionality, though isn't the core of CanvaS. 
+
+{% highlight scala %}
+width = 256
+height = 256
+
+color = Color(255, 0, 0)
+fillRect(0, 0, width / 2, height / 2)
+drawLine(0, 0, width, height)
+fillOval(width / 2, 0, width / 2, height / 2)
+drawRoundRect(25, height / 2 + 25, width/2 - 50, height/2 - 50, 20, 20)
+{% endhighlight %}
+
+## Higher Order Functions on Pixels and Positions
+Many operations on pixels can be expressed as a single function.
+CanvaS offers a 'map' function that can be used to great effect.
+
+In this example, we map the x and y coordinates to green and blue pixels on the canvas.  
+{% highlight scala %}
+width = 256
+height = 256
+
+// (Int, Int) => Color
+mapPosition {
+    case (x, y) => Color(0, x, y)
+}
+{% endhighlight %}
+
+We can also load images from our computer or the web and apply transformations from the previous color to another color.
+{% highlight scala %}
+load(\"example_input/fat_cat.jpg\")
+
+mapColor {
+    case Color(r, g, b) => {
+        val c = (r + g + b) / 3  // Compute the average value 
+        Color(c, c, c)           // use this average for each (r,g,b) component
+    }
+}
+{% endhighlight %}
+
+{% highlight scala %}
+load(\"http://i.imgur.com/GWLF4UQ.jpg\")
+
+mapColor {
+    case Color(r, g, b) => Color(b, g, r)  // Reverse (r,g,b) to (b,g,r)
+}
+{% endhighlight %}
+If you want to outsmart the check that I perform on 'load' you can also use 'loadFile' and 'loadUrl' for self-documentation.
+
+
+One last example, my favorite generated image is very easy to express as a function.
+If you want to find out why this works, get ready to break out your truth tables!
+{% highlight scala %}
+width = 256
+height = 256
+
+mapPosition {
+    case (x, y) => Color(x ^ y, x ^ y, x ^ y)
+}
+{% endhighlight %}
+Note that this code would break if our image was any bigger because it would try to produce (r, g, b) values greater than 255.
+
+## Canvas Modification
+Sometimes it is handy to be able to modify the entire canvas by applying common operations like translating, scaling, and shearing.
+
+It is simple to apply any of these transformations.
+
+{% highlight scala %}
+load(\"example_input/cute_cat.jpg\")
+
+//     angle       centerX, centerY
+rotate(45 degrees, width/2, height/2) 
+{% endhighlight %}
+
+Notice two things:
+
+* We implicitly converted from degrees to radians with the 'degrees' postfix-operator.
+* The un-rotated picture of the cat is still in the background.  
+
+Because we sometimes want this behavior, and it would be silly of me to guess what color you actually wanted the
+background to be, what we'll see next will solve this issue.
+
+
+If you wanted to perform many of these modifications to the canvas, there would be a lot of copying going on.
+For this, I provide the 'chainedOps' object which allows you to, well, chain operations which look like they will
+be computed sequentially, but are actually all done at once!  Here's what some look like:
+
+{% highlight scala %}
+load(\"example_input/cute_cat.jpg\")
+
+chainedOps
+    .rotate(30 degrees, width / 2, height / 2)
+    .translate(-width / 2, -height / 2)
+    .scale(2)
+    .translate(width / 2+100, height / 2 + 100)
+    .run()
+
+{% endhighlight %}
+
+Neat! But how does this help with the background issue?
+Another function on chainedOps lets us set the background color used during a transformation.
+
+{% highlight scala %}
+load(\"example_input/cute_cat.jpg\")
+
+chainedOps
+    .rotate(45 degrees, width / 2, height / 2)
+    .withBackground(Color(0, 0, 0))
+    .run()
+{% endhighlight %}
+
+There we go!  And obviously, we can have as many transformations in that chain as we want.
+
+
+## File IO, Displaying, and Saving Images 
+You've already seen 'load', but 'loadFile' and 'loadUrl' also exist if
+you want to be explicit about where you are getting your resource from.
+
+We also have the 'writeTo' function, which takes a file path and saves the current image to that path.
+
+{% highlight scala %}
+load(\"example_input/cute_cat.jpg\")
+
+mapColor {
+    case Color(r, g, b) => {
+        val c = (r + g + b)/3
+        if (c < 50) Color(0, 0, 0)  else Color(255, 255, 255)
+    }
+}
+
+writeTo(\"example_output/black_and_white_cat.png\")
+{% endhighlight %}
+
+For quick iterations, it would be nice if our program could pop up a window with our image in it instead of
+having to save the picture and then open it up to view it.  Luckily I thought of that, and provide the
+methods `show()` and `show(title)`.  These will pop up a window that displays the image at the current point.
+This means that you can call show multiple times during a multi-step process and it will show all of the steps.
+{% highlight scala %}
+load(\"example_input/trees.jpg\")
+
+show(\"unscaled\")
+
+scale(0.5)
+width /= 2
+height /= 2
+
+show(\"scaled\")
+{% endhighlight %}
+
+That's all the file IO and display things, but here are some more notes:
+
+Setting 'width' and 'height' after they were first set or after a `load(file)` call will crop the image to
+the new width and height.  You can also crop an area using the function 'crop(x, y, width, height)'.
+
+
+If you want to use this code to generate a java.awt.BufferedImage, simply instantiate a class that extends
+Canvas and then access the 'imageBuffer' field on it.
+`val image = ((new MyCanvas).imageBuffer)` 
+
+
+## Actually getting this code working
+
+You will need 3 things in order to actually start manipulating images programmatically. 
+
+1. The Scala Compiler
+2. An IDE that supports Scala
+3. My library.
+
+(SBT support coming soon)
+
+Once you have the above required programs and library, it is time to actually run some code.
+Fortunately, I've made it incredibly easy to do so!
+The Canvas class contains all the functions that you've been reading about, so we simply need
+to do one extension and we're good.  The complete code for the previous example is just this:
+
+{% highlight scala %}
+import com.prealpha.Canvas
+object MyCanvas extends Canvas {
+    load(\"example_input/trees.jpg\")
+
+    show(\"unscaled\")
+
+    scale(0.5)
+    width /= 2
+    height /= 2
+
+    show(\"scaled\")
+}
+{% endhighlight %}
+
+Notice that the only difference between my example scripts and the code that actually runs is the
+import and that we wrap everything in an `object` that extends `Canvas`!  Because `Canvas` extends `App`,
+the entrypoint to our program is also inside MyCanvas as well!  We can have a fully running image generator
+in fewer lines than it takes to write \"Hello World\" in Java.
