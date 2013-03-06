@@ -68,7 +68,7 @@ body {
     padding: 0px;
     //width: 50%;
     -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0px;
-
+    background: #f0f3f3;
     border-radius: 5px;
 }
 
@@ -76,13 +76,13 @@ body {
     background: #f0f3f3;
     font-family: Menlo, Monaco, 'Andale Mono', 'lucida console', 'Courier New', monospace;
     font-size: 13px;
+    border-radius: 5px;
 
 }
 
 .code-td{
   width: 50%;
   vertical-align:top;
-  background: #f0f3f3;
 }
 .image-td{
   //width: 25%;
