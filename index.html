@@ -40,7 +40,8 @@ color = Color(255, 0, 0)
 fillRect(0, 0, width / 2, height / 2)
 drawLine(0, 0, width, height)
 fillOval(width / 2, 0, width / 2, height / 2)
-drawRoundRect(25, height / 2 + 25, width/2 - 50, height/2 - 50, 20, 20)
+drawRoundRect(25, height / 2 + 25,
+    width/2 - 50, height/2 - 50, 20, 20)
 {% endhighlight %}
 {% include inbetween %}
 <img src ="./example_output/basicDrawing.png" />
@@ -77,8 +78,10 @@ load("example_input/fat_cat.jpg")
 
 mapColor {
     case Color(r, g, b) => {
-        val c = (r + g + b) / 3  // Compute the average value 
-        Color(c, c, c)           // use this average for each (r,g,b) component
+        // Compute the average value
+        val c = (r + g + b) / 3
+        // use this average for each (r,g,b) component
+        Color(c, c, c)
     }
 }
 {% endhighlight %}
