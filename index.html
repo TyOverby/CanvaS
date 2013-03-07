@@ -14,7 +14,7 @@ Later I'll show how to set up an environment for the scripts, but lets look at s
 
 <h2> Basic Drawing </h2>
 CanvaS provides many functions from Java's Grahpics2D class.
-This enables basic drawing functionality, though isn't the core of CanvaS. 
+This enables basic drawing functionality, though isn't the core of CanvaS.
 
 {% include code %}
 {% highlight scala  linenos %}
@@ -124,7 +124,7 @@ mapPosition {
 load("example_input/cute_cat.jpg")
 
 //     angle       centerX, centerY
-rotate(45 degrees, width/2, height/2) 
+rotate(45 degrees, width/2, height/2)
 {% endhighlight %}
 {% include inbetween %}
 <a href="./example_output/cute_rotation.png"> <img src ="./example_output/cute_rotation.png" /> </a>
@@ -273,8 +273,8 @@ Canvas and then access the 'imageBuffer' field on it.
 
 {% include code %}
 {% highlight scala %}
-import com.prealpha.Canvas
-object MyCanvas extends Canvas {
+import com.tyoverby.canvas.Canvas
+object MyCanvas extends Canvas with App {
     load("example_input/trees.jpg")
 
     show("unscaled")
